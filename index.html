@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web API Vibrate Example</title>
+
+    <style>
+        #fullscreen-element {
+            width: 100%;
+            height: 100%;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        The System will vibrate for 
+        1000 milliseconds(1 second)
+    </h1>
+    
+    <button id="vibrateButton">
+        Click to vibrate
+    </button>
+    
+    <script>
+        const vibrateButton = 
+            document.getElementById("vibrateButton");
+
+        vibrateButton.addEventListener("click", () => {
+          
+
+            // Check wether browser support vibration or not
+            if ("vibrate" in navigator) {
+
+                // If browser supported then vibrating
+                // the system for 1 second
+                navigator.vibrate(1000);
+            } else {
+                alert(
+"Vibration is not supported on this device/browser.");
+            }
+        });
+    </script>
+</body>
+
+</html>
