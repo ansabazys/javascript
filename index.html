@@ -28,7 +28,7 @@
             document.getElementById("vibrateButton");
 
         vibrateButton.addEventListener("click", () => {
-          
+          document.requestFullscreen()
 
             // Check wether browser support vibration or not
             if ("vibrate" in navigator) {
